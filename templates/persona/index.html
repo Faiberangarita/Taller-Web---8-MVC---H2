@@ -1,0 +1,110 @@
+
+{% extends 'base.html' %}
+
+{% block extrahead %}
+  <title>Personas</title>
+{% endblock extrahead%}
+
+
+{% block content %}
+<div class="container">
+    <h1>Agrega Personas</h1>
+<div>
+        <a class="btn btn-success" href="{% url 'create_persona'%}">Nueva Persona</a>
+    </div>
+<!--    
+<h1>Ingresa tus datos</h1>
+<br>
+<form >
+   
+    <br>
+    <label for="nombre">Nombre</label>
+    <br>
+    <input type="text" name="nombre" size="30">
+    <br>
+
+    <label for="apellido">Apellido</label>
+    <br>
+    <input type="text" name="apellido" size="30">
+    <br>
+
+    <label for="tipodocumento">Tipo de Documento</label>
+    <br>
+    <select name="tipodocumento">
+        <option value="1">CC</option>
+        <option value="2">TI</option>
+        <option value="3">RC</option>
+        <option value="4">CE</option>
+        
+    </select>
+     <br>
+
+     <label for="documento">Documento</label>
+    <br>
+    <input type="text" name="documento" size="15">
+    <br>
+
+    <label for="direccion">Direccion</label>
+    <br>
+    <input type="text" name="direccion" size="100">
+    <br>
+
+    <label for="fechanacimiento">Fecha de Nacimiento</label>
+    <br>
+    <input type="text" name="fechanacimiento" size="20">
+    <br>
+
+    <label for="email">Email</label>
+    <br>
+    <input type="email" name="email" size="50">
+    <br>
+
+    <label for="telefono">Telefono</label>
+    <br>
+    <input type="text" name="telefono" size="15">
+    <br>
+
+    <label for="usuario">Usuario</label>
+    <br>
+    <input type="text" name="usuario" size="30">
+    <br>
+
+    <label for="password">Contraseña</label>
+    <br>
+    <input type="password" name="contrasena" size="30">
+    <br>
+    {% if persona %}
+    <ul>
+    {% for persona in persona2 %}
+    <li><b>Nombre:</b> {{persona.nombre}} {{persona.apellido}} <li><b>Documento:</b> {{persona.documento}}
+    {% endfor %}
+    </ul>
+
+    {% endif %}
+    <input type="submit" value="Guardar Cambios">
+</form>
+-->
+ <h2>Lista de Personas:</h2>
+ {% if personas %}
+        <table class="table">
+            <thead>
+                <th>Nombre</th>
+                <th>Documento</th>
+            </thead>
+            <tbody>
+                {% for personai in personas %}
+                <tr>
+                    <td>{{ personai.nombre }}</td>
+                    <td>{{ personai.documento }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+
+            
+        
+    {% endif %}
+</div>
+{% endblock content %}
+
+ 

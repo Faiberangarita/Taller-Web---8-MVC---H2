@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="style.css">
+    
+     
+</head>
+
+<body>
+
+{% extends 'base.html' %}
+
+        {% block extrahead %}
+        
+        {% endblock extrahead %}
+       
+
+<!-- bloque de introduccion de contenido -->
+            {% block content %}
+            <div class="container">
+            <h1>Home de la aplicacion</h1>
+            <p>Este es el home de la aplicacion</p>
+            </div>
+        {% endblock content %}
+
+         {% block scripts %}
+        {% endblock scripts %}
+
+   
+</body>
+</html>

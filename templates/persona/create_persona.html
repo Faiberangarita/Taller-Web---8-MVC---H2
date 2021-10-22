@@ -1,0 +1,21 @@
+
+{% extends 'base.html' %}
+
+{% block extrahead %}
+    <tittle>Registrarse</title>
+{% endblock extrahead %}
+       
+
+<!-- bloque de introduccion de contenido -->
+{% block content %}
+<div class="container">
+        <h1>Registrese para la base de datos</h1>
+        <form action="" method="post">
+                {% csrf_token %}
+                {{ form }}
+                <br>
+                <input type="submit" value="Submit" class="btn btn-success">
+                <a class="btn btn-danger" href="{% url 'index'%}"> Cancelar</a>
+        </form>
+{% endblock content %}
+
